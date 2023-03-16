@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div>
-      <p>Hello from search engine</p>
+      <p className="font-bold text-3xl">Hello from search engine</p>
     </div>
   )
 }
