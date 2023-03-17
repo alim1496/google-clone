@@ -1,13 +1,23 @@
 import { useState } from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import './App.css'
+import Home from './pages/Home';
+import Search from './pages/Search';
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <p className="font-bold text-3xl">Hello from search engine</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/search" element={<Search/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
